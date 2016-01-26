@@ -1,0 +1,32 @@
+{
+  "manifest_version": 2,
+  "name": "Facebook profile picture watcher",
+  "description": "Gets the latest facebook profile picture of someone you want to see!",
+  "version": "1.0.2.0",
+  "browser_action": {
+    "default_icon": "image_48.png",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "image_16.png",
+    "48": "image_48.png",
+    "128": "image_128.png"
+  },
+  "permissions": [
+    "https://scontent.xx.fbcdn.net/*",
+    "https://graph.facebook.com/*",
+    "http://findmyfbid.com/",
+    "background",
+    "storage"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": true
+  },
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": true
+  }
+}
